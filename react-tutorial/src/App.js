@@ -4,6 +4,28 @@ import './App.css';
 import Table from './Table';
 import SimpleComp from './SimpleComp';
 import SimpleClassComp from './SimpleClassComp';
+import TableProps from './TableProps';
+
+const t = 'teste';
+
+const characters = [
+  {
+      'name': 'Charlie',
+      'job': 'Janitor'
+  },
+  {
+      'name': 'Mac',
+      'job': 'Bouncer'
+  },
+  {
+      'name': 'Dee',
+      'job': 'Aspring actress'
+  },
+  {
+      'name': 'Dennis',
+      'job': 'Bartender'
+  }
+];
 
 class App extends Component {
   render() {
@@ -23,11 +45,16 @@ class App extends Component {
             Learn React
           </a>
         </header>
-      </div>*/
+      </div>
+
         <div className="container">
             <Table/>
             <SimpleComp/>
             <SimpleClassComp/>
+        </div> */
+
+        <div className="container">
+            <TableProps characterData={characters} teste={t} />
         </div>
     );
   }
